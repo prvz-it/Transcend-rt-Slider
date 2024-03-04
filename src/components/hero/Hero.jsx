@@ -8,14 +8,14 @@ import './Hero.css';
 function SampleNextArrow(props) {
   const { onClick } = props;
   return (
-    <div onClick={onClick} ><FaChevronLeft className="nextAry"/></div>
+    <div onClick={onClick} ><FaChevronRight className="prevAry"/></div>
   );
 }
 
 function SamplePrevArrow(props) {
   const { onClick } = props;
   return (
-    <div onClick={onClick} ><FaChevronRight className="prevAry"/></div>
+    <div onClick={onClick} ><FaChevronLeft className="nextAry"/></div>
   );
 }
 
@@ -27,7 +27,7 @@ const Hero = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 6000,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
     responsive: [
@@ -45,7 +45,7 @@ const Hero = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          initialSlide: 2
+          initialSlide: 1
         }
       },
       {
