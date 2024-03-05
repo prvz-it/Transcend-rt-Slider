@@ -3,6 +3,7 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import hero1 from '../../assets/hero1.jpg';
 import hero2 from '../../assets/hero2.jpg';
 import hero3 from '../../assets/hero3.jpg';
+import Hero_reusable from "../reusable/Hero_reusable";
 import './Hero.css';
 
 function SampleNextArrow(props) {
@@ -61,27 +62,9 @@ const Hero = () => {
     <>
       <section id='hero'>
         <Slider {...settings}>
-          <div className="heroImage">
-            <img src={ hero1 } alt="hero-01" />
-            <div className="heroText">
-              <h4>Nature Beauty</h4>
-              <h2>Miami Lake</h2>
-            </div>
-          </div>
-          <div className="heroImage">
-            <img src={ hero2 } alt="hero-02" />
-            <div className="heroText">
-              <h4>Travel Shot</h4>
-              <h2>Kayaking on Lake</h2>
-            </div>
-          </div>
-          <div className="heroImage">
-            <img src={ hero3 } alt="hero-03" />
-            <div className="heroText">
-              <h4>Action Shot</h4>
-              <h2>Electricity</h2>
-            </div>
-          </div>
+          <Hero_reusable heroImg={<img src={ hero1 } alt="hero-01" />} subText="Nature Beauty" title="Miami Lake"/>
+          <Hero_reusable heroImg={<img src={ hero2 } alt="hero-02" />} subText="Travel Shot" title="Kayaking on Lake"/>
+          <Hero_reusable heroImg={<img src={ hero3 } alt="hero-03" />} subText="Action Shot" title="Electricity"/>
         </Slider>
       </section>
     </>
